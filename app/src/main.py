@@ -14,6 +14,6 @@ def create_task(task: TaskCreate):
         id=1,
         title=task.title,
         status=TaskStatus.pending,
-        created_at=datetime.utcnow(),
+        created_at=datetime.now(timezone.utc),
         owner_id=task.owner_id,
     )
